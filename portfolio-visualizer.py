@@ -64,9 +64,11 @@ for key in keywords:
             try:
                 driver.find_element_by_id('symbol').send_keys(key)
                 try:
-                    driver.find_element_by_xpath('/html/body/div[2]/form/div[11]/div/div/span[2]').click()
+                    driver.find_element_by_xpath('/html/body/div[2]/form/div[15]/div/div/span[2]').click()
                     time.sleep(1)
-                    driver.find_element_by_xpath('/html/body/div[3]/div/div/div[3]/button[1]').click()
+                    driver.find_element_by_xpath('/html/body/div[3]/div/div/div[2]/form/div[2]/div/span/input').send_keys(key)
+                    driver.find_element_by_xpath('/html/body/div[3]/div/div/div[2]/form/div[2]/div/span/div/div/div[1]').click()
+                    driver.find_element_by_xpath('/html/body/div[3]/div/div/div[3]/button[2]').click()
                 except:
                     continue
             except:
